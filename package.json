@@ -1,0 +1,19 @@
+{
+  "name": "plugoplay",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "build": "tsup",
+    "dev": "node server.js"
+  },
+  "dependencies": {
+    "@tiendanube/nube-sdk-jsx": "^0.21.0",
+    "@tiendanube/nube-sdk-types": "^0.97.0",
+    "cors": "^2.8.6",
+    "express": "^5.2.1"
+  },
+  "devDependencies": {
+    "tsup": "^8.5.1",
+    "typescript": "^7.0.2"
+  }
+}

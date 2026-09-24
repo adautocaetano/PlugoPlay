@@ -1,31 +1,40 @@
-// src/main.tsx
-function App(nube) {
+function App(nube: any) {
   console.log("PlugoPlay iniciado!");
+
   let clicado = false;
+
   const renderizar = () => {
     const componente = {
       type: "button",
-      children: clicado ? "\u2705 PlugoPlay executado!" : "\u{1F680} PlugoPlay",
+      children: clicado
+        ? "✅ PlugoPlay executado!"
+        : "🚀 PlugoPlay",
+
       onClick: () => {
-        console.log("[PlugoPlay] BOT\xC3O CLICADO!");
+        console.log("[PlugoPlay] BOTÃO CLICADO!");
+
         clicado = true;
+
         renderizar();
+
         console.log(
-          "[PlugoPlay] BOT\xC3O ATUALIZADO!"
+          "[PlugoPlay] BOTÃO ATUALIZADO!"
         );
       }
     };
+
     console.log(
       "[PlugoPlay] Renderizando:",
       componente
     );
+
     nube.render(
       "before_main_content",
       componente
     );
   };
+
   renderizar();
 }
-export {
-  App
-};
+
+export { App };
